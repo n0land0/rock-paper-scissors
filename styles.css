@@ -24,7 +24,7 @@ header, footer {
   margin: 0;
   padding: 0 0 .75rem 0;
   font-family: 'dpuntillasALaceRegular', sans-serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: white;
   text-shadow:
     3px 3px 0 #000,
@@ -38,7 +38,7 @@ header, footer {
 main {
   display: flex;
   justify-content: space-between;
-  /* height: 100rem; */
+  height: 40.21rem;
   background-color: #94E1FF;
   font-family: 'FuturaRennerRegular', sans-serif;
   color: #FFEEA3;
@@ -71,8 +71,21 @@ main {
 }
 .win-count-human {}
 .win-count-computer {}
-.button-change-game {}
-
+.button-change-game {
+  margin: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #BAFFAB;
+  font-family: 'JelleeBold', sans-serif;
+  font-size: 1rem;
+  color: #BBAAFF;
+}
+.button-change-game:hover {
+  filter: hue-rotate(45deg);
+  transform: rotate(-5deg);
+  cursor: pointer;
+}
 /* MAIN ELEMENTS */
 .game-select {
   display: flex;
@@ -88,16 +101,26 @@ main {
   margin: 0;
   padding: 6rem;
   background-image: url("assets/nickelodeon-movies-spongebob-squarepants-television-show-free-257673.png");
-  /* filter: invert(); */
+  filter: invert();
   background-repeat: no-repeat;
   background-size: 29rem;
   background-position: 50% 50%;
+  color: #450054;
   font-size: 3rem;
   font-weight: bold;
+  text-shadow:
+    3px 3px 0 #FFF,
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;
 }
 .outcome {}
-.modes {
+.modes,
+fighters {
   display: flex;
+  width: 100%;
+  margin: 2rem 0 6.23rem 0;
 }
 .select-mode {
   display: flex;
@@ -105,13 +128,14 @@ main {
   align-items: center;
   width: 18rem;
   height: 14rem;
-  margin: 2rem 4rem 4rem 4rem;
+  margin: 0 4rem 0 4rem;
   padding: 1rem;
   background-color: #0ABAFF;
 }
 .select-mode:hover {
   background-color: white;
   transform: scale(1.1);
+  cursor: pointer;
 }
 .classic-mode {}
 .alt-mode {}
@@ -124,11 +148,18 @@ main {
   margin: .1rem;
   font-size: 1.25rem;
 }
-
 .fighters {}
+.select-fighter {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  /* margin: 0 4rem 0 4rem; */
+}
 .fighters-classic {}
 .fighters-alt {}
-.character {}
+.character {
+  width: 10rem;
+}
 .rock-character {}
 .paper-character {}
 .scissors-character {}
