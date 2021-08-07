@@ -11,9 +11,11 @@ html, body {
 }
 
 /* HEADER */
-header {
+header, footer {
   display: flex;
   justify-content: center;
+  width: 100%;
+  /* z-index: 0; */
   background-color: #FF94BD;
   /* z-index: -1; */
   /* margin: 0; */
@@ -26,7 +28,7 @@ header {
   color: white;
   text-shadow:
     3px 3px 0 #000,
-    -1px -1px 0 #000,  
+    -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
@@ -78,19 +80,32 @@ main {
   align-items: center;
 }
 .choose {
-  /* font-family: 'dpuntillasALaceRegular', sans-serif; */
-  margin: 2rem 0 0 0;
+  /* font-family: 'JelleeBold', sans-serif; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 4rem;
+  margin: 0;
+  padding: 6rem;
+  background-image: url("assets/nickelodeon-movies-spongebob-squarepants-television-show-free-257673.png");
+  /* filter: invert(); */
+  background-repeat: no-repeat;
+  background-size: 29rem;
+  background-position: 50% 50%;
   font-size: 3rem;
   font-weight: bold;
 }
 .outcome {}
+.modes {
+  display: flex;
+}
 .select-mode {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 18rem;
   height: 14rem;
-  margin: 1.5rem;
+  margin: 2rem 4rem 4rem 4rem;
   padding: 1rem;
   background-color: #0ABAFF;
 }
