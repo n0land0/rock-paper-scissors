@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- <link href="styles.css" rel="stylesheet"> -->
+  <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <header>
+    <h1>Rock, Paper, Scissors</h1>
+  </header>
+  <main>
+    <section class="win-column-human">
+      <img src="" alt="human icon">
+      <h3>Human</h3>
+      <p>Wins: <span class="win-count-human">0</span></p>
+      <button class="button-change-game hidden">change game?</button>
+    </section>
+    <section class="game-select">
+      <h2>Choose your game!</h2>
+      <article class="select-mode-classic">
+        <h4>Classic</h4>
+        <p class="rules">Rock crushes Scissors</p>
+        <p class="rules">Scissors cut Paper</p>
+        <p class="rules">Paper covers Rock</p>
+      </article>
+      <article class="select-mode-alt">
+        <h4>SpongeBob Death Brawl</h4>
+        <p class="rules"></p>
+        <p class="rules"></p>
+        <p class="rules"></p>
+        <p class="rules"></p>
+        <p class="rules"></p>
+      </article>
+    </section>
+    <section class="win-column-computer">
+      <img src="" alt="computer icon">
+      <h3>Computer</h3>
+      <p>Wins: <span class="win-count-computer">0</span></p>
+    </section>
+  </main>
+  <footer></footer>
+
+  <script src="./main.js" type="text/javascript"></script>
+  <script src="./player.js" type="text/javascript"></script>
+  <script src="./game.js" type="text/javascript"></script>
+</body>
+
+</html>
