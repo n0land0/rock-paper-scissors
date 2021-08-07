@@ -1,0 +1,177 @@
+html {
+  font-size: 1vw;
+  /* font-family: 'JelleeBold', sans-serif; */
+  /* font-family: 'FuturaRennerRegular', sans-serif; */
+}
+
+html, body {
+  margin: auto;
+  /* width: 100%; */
+  height: 100%;
+}
+
+/* HEADER */
+header, footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* z-index: 0; */
+  background-color: #FF94BD;
+  /* z-index: -1; */
+  /* margin: 0; */
+}
+.title-main {
+  margin: 0;
+  padding: 0 0 .75rem 0;
+  font-family: 'dpuntillasALaceRegular', sans-serif;
+  font-size: 3rem;
+  color: white;
+  text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  justify-content: space-between;
+  height: 40.21rem;
+  background-color: #94E1FF;
+  font-family: 'FuturaRennerRegular', sans-serif;
+  color: #FFEEA3;
+}
+
+/* WIN COLUMNS */
+.wins-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12rem;
+  padding: 1rem;
+  background-color: #FFB094;
+  font-family: 'FuturaRennerRegular', sans-serif;
+}
+.wins-icon {
+  width: 3rem;
+  height: 3rem;
+}
+.human-icon {}
+.computer-icon {}
+.wins-header {
+  margin: 0.25rem;
+  font-size: 2.25rem;
+  letter-spacing: 0.25rem;
+}
+.wins-counter {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.win-count-human {}
+.win-count-computer {}
+.button-change-game {
+  margin: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #BAFFAB;
+  font-family: 'JelleeBold', sans-serif;
+  font-size: 1rem;
+  color: #BBAAFF;
+}
+.button-change-game:hover {
+  filter: hue-rotate(45deg);
+  transform: rotate(-5deg);
+  cursor: pointer;
+}
+/* MAIN ELEMENTS */
+.game-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.choose {
+  /* font-family: 'JelleeBold', sans-serif; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 4rem;
+  margin: 0;
+  padding: 6rem;
+  background-image: url("assets/nickelodeon-movies-spongebob-squarepants-television-show-free-257673.png");
+  filter: invert();
+  background-repeat: no-repeat;
+  background-size: 29rem;
+  background-position: 50% 50%;
+  color: #450054;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow:
+    3px 3px 0 #FFF,
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;
+}
+.outcome {}
+.modes,
+fighters {
+  display: flex;
+  width: 100%;
+  margin: 2rem 0 6.23rem 0;
+}
+.select-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18rem;
+  height: 14rem;
+  margin: 0 4rem 0 4rem;
+  padding: 1rem;
+  background-color: #0ABAFF;
+}
+.select-mode:hover {
+  background-color: white;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.classic-mode {}
+.alt-mode {}
+.mode-header {
+  margin: 1rem 0 1rem 0;
+  font-variant: small-caps;
+  font-size: 1.75rem;
+}
+.rules {
+  margin: .1rem;
+  font-size: 1.25rem;
+}
+.fighters {}
+.select-fighter {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  /* margin: 0 4rem 0 4rem; */
+}
+.fighters-classic {}
+.fighters-alt {}
+.character {
+  width: 10rem;
+}
+.rock-character {}
+.paper-character {}
+.scissors-character {}
+.spongebob-character {}
+.patrick-character {}
+.squidward-character {}
+.sandy-character {}
+.krabs-character {}
+
+.matchup {}
+
+/* UTILITY CLASSES */
+.hidden {
+  display: none;
+}
