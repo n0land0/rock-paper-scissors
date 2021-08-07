@@ -9,52 +9,52 @@
 
 <body>
   <header>
-    <h1 class="main-header">Rock, Paper, Scissors</h1>
+    <h1 class="title-main">Rock, Paper, Scissors</h1>
   </header>
   <main>
-    <section class="win-column-human">
-      <img src="" alt="human icon">
-      <h3>Human</h3>
-      <p>Wins: <span class="win-count-human">0</span></p>
+    <section class="wins-column">
+      <img class="wins-icon human-icon" src="assets/human.svg" alt="human icon">
+      <h3 class="wins-header">Human</h3>
+      <p class="wins-counter">Wins: <span class="win-count-human">0</span></p>
       <button class="button-change-game hidden">change game?</button>
     </section>
     <section class="game-select">
-      <h2>Choose your game!</h2>
-      <h2>Choose your fighter!</h2>
-      <h2>Win</h2>
-      <h2>Lose</h2>
-      <h2>Draw</h2>
-      <article class="select-mode-classic">
-        <h4>Classic</h4>
+      <h2 class="choose">Choose your game!</h2>
+      <h2 class="choose">Choose your fighter!</h2>
+      <h2 class="outcome">Win</h2>
+      <h2 class="outcome">Lose</h2>
+      <h2 class="outcome">Draw</h2>
+      <article class="select-mode classic-mode">
+        <h4 class="mode-header">Classic</h4>
         <p class="rules">Rock crushes Scissors</p>
         <p class="rules">Scissors cut Paper</p>
         <p class="rules">Paper covers Rock</p>
       </article>
-      <article class="select-mode-alt">
-        <h4>SpongeBob Death Brawl</h4>
+      <article class="select-mode alt-mode">
+        <h4 class="mode-header">SpongeBob Death Brawl</h4>
         <p class="rules"></p>
         <p class="rules"></p>
         <p class="rules"></p>
         <p class="rules"></p>
         <p class="rules"></p>
       </article>
-      <article class="fighters-classic">
-        <img class="rock-character" src="" alt="rock character">
-        <img class="paper-character" src="" alt="paper character">
-        <img class="scissors-character" src="" alt="scissors character">
+      <article class="fighters fighters-classic hidden">
+        <img class="character rock-character" src="assets/Rock.svg" alt="rock character">
+        <img class="character paper-character" src="assets/Paper.svg" alt="paper character">
+        <img class="character scissors-character" src="assets/Scissors.svg" alt="scissors character">
       </article>
-      <article class="fighters-alt">
-        <img class="spongebob-character" src="" alt="SpongeBob character">
-        <img class="patrick-character" src="" alt="Patrick character">
-        <img class="squidward-character" src="" alt="Squidward character">
-        <img class="sandy-character" src="" alt="Sandy character">
-        <img class="krabs-character" src="" alt="Krabs character">
+      <article class="fighters fighters-alt hidden">
+        <img class="character spongebob-character" src="" alt="SpongeBob character">
+        <img class="character patrick-character" src="" alt="Patrick character">
+        <img class="character squidward-character" src="" alt="Squidward character">
+        <img class="character sandy-character" src="" alt="Sandy character">
+        <img class="character gary-character" src="" alt="Gary character">
       </article>
     </section>
-    <section class="win-column-computer">
-      <img src="" alt="computer icon">
-      <h3>Computer</h3>
-      <p>Wins: <span class="win-count-computer">0</span></p>
+    <section class="wins-column">
+      <img "wins-icon computer-icon" src="assets/robot.svg" alt="computer icon">
+      <h3 class="wins-header">Computer</h3>
+      <p class="wins-counter">Wins: <span class="win-count-computer">0</span></p>
     </section>
   </main>
   <footer></footer>
