@@ -1,32 +1,114 @@
 html {
-  font-size: 100vw;
+  font-size: 1vw;
+  /* font-family: 'JelleeBold', sans-serif; */
+  /* font-family: 'FuturaRennerRegular', sans-serif; */
+}
+
+html, body {
+  margin: auto;
+  /* width: 100%; */
+  height: 100%;
 }
 
 /* HEADER */
-header {}
-.title-main {}
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #FF94BD;
+  /* z-index: -1; */
+  /* margin: 0; */
+}
+.title-main {
+  margin: 0;
+  padding: 0 0 .75rem 0;
+  font-family: 'dpuntillasALaceRegular', sans-serif;
+  font-size: 3.5rem;
+  color: white;
+  text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
 
 /* MAIN */
-main {}
+main {
+  display: flex;
+  justify-content: space-between;
+  /* height: 100rem; */
+  background-color: #94E1FF;
+  font-family: 'FuturaRennerRegular', sans-serif;
+  color: #FFEEA3;
+}
 
 /* WIN COLUMNS */
-.wins-column {}
-.wins-icon {}
-.wins-header {}
-.wins-counter {}
+.wins-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12rem;
+  padding: 1rem;
+  background-color: #FFB094;
+  font-family: 'FuturaRennerRegular', sans-serif;
+}
+.wins-icon {
+  width: 3rem;
+  height: 3rem;
+}
+.human-icon {}
+.computer-icon {}
+.wins-header {
+  margin: 0.25rem;
+  font-size: 2.25rem;
+  letter-spacing: 0.25rem;
+}
+.wins-counter {
+  margin: 0;
+  font-size: 1.5rem;
+}
 .win-count-human {}
 .win-count-computer {}
 .button-change-game {}
 
 /* MAIN ELEMENTS */
-.game-select {}
-.choose {}
+.game-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.choose {
+  /* font-family: 'dpuntillasALaceRegular', sans-serif; */
+  margin: 2rem 0 0 0;
+  font-size: 3rem;
+  font-weight: bold;
+}
 .outcome {}
-.select-mode {}
+.select-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18rem;
+  height: 14rem;
+  margin: 1.5rem;
+  padding: 1rem;
+  background-color: #0ABAFF;
+}
+.select-mode:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
 .classic-mode {}
 .alt-mode {}
-.mode-header {}
-.rules {}
+.mode-header {
+  margin: 1rem 0 1rem 0;
+  font-variant: small-caps;
+  font-size: 1.75rem;
+}
+.rules {
+  margin: .1rem;
+  font-size: 1.25rem;
+}
 
 .fighters {}
 .fighters-classic {}
@@ -39,7 +121,7 @@ main {}
 .patrick-character {}
 .squidward-character {}
 .sandy-character {}
-.gary-character {}
+.krabs-character {}
 
 .matchup {}
 

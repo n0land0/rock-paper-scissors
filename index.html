@@ -3,8 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- <link href="styles.css" rel="stylesheet"> -->
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/jellee-typeface" type="text/css"/>
   <title>Rock, Paper, Scissors</title>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/futura-renner" type="text/css"/>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/de-puntillas-a-lace-regular" type="text/css"/>
 </head>
 
 <body>
@@ -20,23 +23,23 @@
     </section>
     <section class="game-select">
       <h2 class="choose">Choose your game!</h2>
-      <h2 class="choose">Choose your fighter!</h2>
-      <h2 class="outcome">Win</h2>
-      <h2 class="outcome">Lose</h2>
-      <h2 class="outcome">Draw</h2>
+      <h2 class="choose hidden">Choose your fighter!</h2>
+      <h2 class="outcome hidden">Win</h2>
+      <h2 class="outcome hidden">Lose</h2>
+      <h2 class="outcome hidden">Draw</h2>
       <article class="select-mode classic-mode">
         <h4 class="mode-header">Classic</h4>
-        <p class="rules">Rock crushes Scissors</p>
-        <p class="rules">Scissors cut Paper</p>
-        <p class="rules">Paper covers Rock</p>
+        <p class="rules">Rock > Scissors</p>
+        <p class="rules">Scissors > Paper</p>
+        <p class="rules">Paper > Rock</p>
       </article>
       <article class="select-mode alt-mode">
         <h4 class="mode-header">SpongeBob Death Brawl</h4>
-        <p class="rules"></p>
-        <p class="rules"></p>
-        <p class="rules"></p>
-        <p class="rules"></p>
-        <p class="rules"></p>
+        <p class="rules">SpongeBob > Squidward & Krabs</p>
+        <p class="rules">Patrick > SpongeBob & Sandy</p>
+        <p class="rules">Squidward > Sandy & Krabs</p>
+        <p class="rules">Sandy > SpongeBob & Patrick</p>
+        <p class="rules">Krabs > Patrick & Squidward</p>
       </article>
       <article class="fighters fighters-classic hidden">
         <img class="character rock-character" src="assets/Rock.svg" alt="rock character">
@@ -48,11 +51,11 @@
         <img class="character patrick-character" src="" alt="Patrick character">
         <img class="character squidward-character" src="" alt="Squidward character">
         <img class="character sandy-character" src="" alt="Sandy character">
-        <img class="character gary-character" src="" alt="Gary character">
+        <img class="character krabs-character" src="" alt="Krabs character">
       </article>
     </section>
     <section class="wins-column">
-      <img "wins-icon computer-icon" src="assets/robot.svg" alt="computer icon">
+      <img class="wins-icon computer-icon" src="assets/robot.svg" alt="computer icon">
       <h3 class="wins-header">Computer</h3>
       <p class="wins-counter">Wins: <span class="win-count-computer">0</span></p>
     </section>
