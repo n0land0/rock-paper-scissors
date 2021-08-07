@@ -1,0 +1,49 @@
+html {
+  font-size: 100vw;
+}
+
+/* HEADER */
+header {}
+.title-main {}
+
+/* MAIN */
+main {}
+
+/* WIN COLUMNS */
+.wins-column {}
+.wins-icon {}
+.wins-header {}
+.wins-counter {}
+.win-count-human {}
+.win-count-computer {}
+.button-change-game {}
+
+/* MAIN ELEMENTS */
+.game-select {}
+.choose {}
+.outcome {}
+.select-mode {}
+.classic-mode {}
+.alt-mode {}
+.mode-header {}
+.rules {}
+
+.fighters {}
+.fighters-classic {}
+.fighters-alt {}
+.character {}
+.rock-character {}
+.paper-character {}
+.scissors-character {}
+.spongebob-character {}
+.patrick-character {}
+.squidward-character {}
+.sandy-character {}
+.gary-character {}
+
+.matchup {}
+
+/* UTILITY CLASSES */
+.hidden {
+  display: none;
+}
