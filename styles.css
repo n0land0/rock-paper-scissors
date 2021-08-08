@@ -103,7 +103,7 @@ main {
   background-image: url("assets/nickelodeon-movies-spongebob-squarepants-television-show-free-257673.png");
   filter: invert();
   background-repeat: no-repeat;
-  background-size: 29rem;
+  background-size: 30rem;
   background-position: 50% 50%;
   color: #450054;
   font-size: 3rem;
@@ -117,7 +117,7 @@ main {
 }
 .outcome {}
 .modes,
-fighters {
+.fighters {
   display: flex;
   width: 100%;
   margin: 2rem 0 6.23rem 0;
@@ -148,17 +148,26 @@ fighters {
   margin: .1rem;
   font-size: 1.25rem;
 }
-.fighters {}
+.fighters {
+  margin-top: 4rem;
+}
 .select-fighter {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   /* margin: 0 4rem 0 4rem; */
 }
 .fighters-classic {}
 .fighters-alt {}
 .character {
   width: 10rem;
+  filter: invert();
+}
+.character:hover {
+  transform: scale(1.1);
+  filter: hue-rotate(180deg);
+  filter: drop-shadow(0 0 5px grey);
+  cursor: pointer;
 }
 .rock-character {}
 .paper-character {}
