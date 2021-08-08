@@ -32,6 +32,11 @@ fightersClassic.addEventListener("click", logCharacter);
 fightersAlt.addEventListener("click", logCharacter);
 
 // FUNCTIONS
+
+  // new Game starts
+
+  // new Players defaulted on load
+
   // character selection
 function logCharacter() {
   if (event.target.classList.contains("character")) {

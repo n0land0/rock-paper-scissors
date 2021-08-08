@@ -1,15 +1,20 @@
 class Game {
-  constructor(player1, player2) {
+  constructor(player1, player2, type) {
 
   }
 }
 
 // A Game should include:
   // Two Player instances
+    // player 1 and player 2 passed in from main
   // A way to keep track of the data for the game board
+    // fighters & type passed in every game?
   // A way to keep track of the selected game type
+    // main/DOM will draw background from game type
   // A way to check the Game’s board data for win conditions
+    // conditionals
   // A way to detect when a game is a draw (no one has won)
+    // player's fighter properties match
   // A way to reset the Game’s board to begin a new game
 
 
