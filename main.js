@@ -28,7 +28,17 @@ buttonChangeGame.addEventListener("click", showModeSelect);
 classicMode.addEventListener("click", showClassicCharacters);
 altMode.addEventListener("click", showAltCharacters);
 
+fightersClassic.addEventListener("click", logCharacter);
+fightersAlt.addEventListener("click", logCharacter);
+
 // FUNCTIONS
+  // character selection
+function logCharacter() {
+  if (event.target.classList.contains("character")) {
+    console.log(event.target.classList[1]);
+  }
+}
+
   // view switching
 function showModeSelect() {
   show(modes);
