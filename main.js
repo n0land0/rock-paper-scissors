@@ -29,6 +29,11 @@ var altMode = document.querySelector(".alt-mode");
 var fighters = document.querySelector(".fighters");
 var fightersClassic = document.querySelector(".fighters-classic");
 var fightersAlt = document.querySelector(".fighters-alt");
+// var characterIcons = document.querySelectorAll(".character");
+var currentFighter = document.querySelectorAll(".current-fighter");
+var fighter1 = document.querySelector(".fighter-1");
+var fighter2 = document.querySelector(".fighter-2");
+
 
 // EVENT LISTENERS
 window.addEventListener("load", renderPlayers);
@@ -66,14 +71,24 @@ function renderPlayers() {
   winCounts[1].innerText = player2.wins;
 }
 
-game = new Game(player1, player2, "classic-mode");
+// game = new Game(player1, player2, "classic-mode");
+
+function renderFighters() {
+  fighter1.src = characters[player1.fighter];
+  fighter1.alt = player1.fighter;
+  fighter2.src = characters[player2.fighter];
+  fighter2.alt = player2.fighter;
+}
 
   // character selection
 function clickCharacter() {
   if (event.target.classList.contains("character")) {
-    // console.log(event.target.classList[1]);
+    player1.fighter = event.target.classList[1];
+    player2.takeTurn();
+    renderFighters();
     toggleGameBoard();
-    holdView = setInterval(toggleGameBoard, 1000);
+    game.runGame();
+    holdView = setInterval(resetGameBoard, 1000);
   }
 }
 
@@ -112,11 +127,23 @@ function showCharacterSelect() {
   show(buttonChangeGame);
 }
 
+// function toggleGameBoard() {
+//   toggle(gameSelect);
+//   toggle(gameBoard);
+//   toggle(buttonChangeGame);
+//   clearInterval(holdView);
+// }
+
+function resetGameBoard() {
+  game.resetBoard();
+  toggleGameBoard();
+  clearInterval(holdView);
+}
+
 function toggleGameBoard() {
   toggle(gameSelect);
   toggle(gameBoard);
   toggle(buttonChangeGame);
-  clearInterval(holdView);
 }
 
 // function hideGameBoard()
