@@ -89,6 +89,11 @@ function clickCharacter() {
     renderFighters();
     toggleGameBoard();
     game.runGame();
+    if (game.winner) {
+      outcome.innerText = `${game.winner} wins!`;
+    } else {
+      outcome.innerText = "Draw!";
+    }
     holdView = setInterval(resetGameBoard, 1000);
   }
 }
@@ -138,6 +143,7 @@ function showCharacterSelect() {
 function resetGameBoard() {
   game.resetBoard();
   toggleGameBoard();
+  outcome.innerText = "";
   clearInterval(holdView);
 }
 
