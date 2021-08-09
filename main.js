@@ -31,6 +31,12 @@ altMode.addEventListener("click", showAltCharacters);
 
 fightersClassic.addEventListener("click", logCharacter);
 fightersAlt.addEventListener("click", logCharacter);
+  // click fighter >
+  // assign fighter to Player >
+  // runGame on Game instance
+
+// Global variables
+var holdView;
 
 // FUNCTIONS
 
@@ -42,6 +48,8 @@ fightersAlt.addEventListener("click", logCharacter);
 function logCharacter() {
   if (event.target.classList.contains("character")) {
     console.log(event.target.classList[1]);
+    toggleGameBoard();
+    holdView = setInterval(toggleGameBoard, 1000);
   }
 }
 
@@ -74,9 +82,10 @@ function showCharacterSelect() {
   show(buttonChangeGame);
 }
 
-function showGameBoard() {
+function toggleGameBoard() {
   toggle(gameSelect);
   toggle(gameBoard);
+  clearInterval(holdView);
 }
 
 // function hideGameBoard()
@@ -96,4 +105,8 @@ function toggle(element) {
 
 function logTarget() {
   console.log(event.target);
+}
+
+function getRandom(arr) {
+  return Math.floor(Math.random() * arr.length);
 }
