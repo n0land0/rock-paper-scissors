@@ -14,6 +14,9 @@ var buttonChangeGame = document.querySelector(".button-change-game");
 var winsColumn = document.querySelector(".wins-column");
 var gameSelect = document.querySelector(".game-select");
 var gameBoard = document.querySelector(".game-board");
+var winsIcons = document.querySelectorAll(".wins-icon");
+var winsHeaders = document.querySelectorAll(".wins-header");
+var winCounts = document.querySelectorAll(".win-count");
 
 var chooseGame = document.querySelector(".choose-game");
 var chooseFighter = document.querySelector(".choose-fighter");
@@ -28,6 +31,8 @@ var fightersClassic = document.querySelector(".fighters-classic");
 var fightersAlt = document.querySelector(".fighters-alt");
 
 // EVENT LISTENERS
+window.addEventListener("load", renderPlayers);
+
 buttonChangeGame.addEventListener("click", showModeSelect);
 classicMode.addEventListener("click", showClassicCharacters);
 altMode.addEventListener("click", showAltCharacters);
@@ -40,12 +45,28 @@ fightersAlt.addEventListener("click", clickCharacter);
 
 // Global variables
 var holdView;
+var player1;
+var player2;
+var game;
 
 // FUNCTIONS
 
   // new Game starts
 
   // new Players defaulted on load
+    // window event listener?
+function renderPlayers() {
+  player1 = new Player("Human", "assets/human.svg");
+  player2 = new Player("Computer", "assets/robot.svg");
+  winsIcons[0].src = player1.token;
+  winsIcons[1].src = player2.token;
+  winsHeaders[0].innerText = player1.name;
+  winsHeaders[1].innerText = player2.name;
+  winCounts[0].innerText = player1.wins;
+  winCounts[1].innerText = player2.wins;
+}
+
+game = new Game(player1, player2, "classic-mode");
 
   // character selection
 function clickCharacter() {
@@ -71,6 +92,7 @@ function showClassicCharacters() {
     hide(fightersAlt);
   }
   showCharacterSelect();
+  game = new Game(player1, player2, "classic-mode");
 }
 
 function showAltCharacters() {
@@ -79,6 +101,7 @@ function showAltCharacters() {
     hide(fightersClassic);
   }
   showCharacterSelect();
+  game = new Game(player1, player2, "alt-mode");
 }
 
 function showCharacterSelect() {
