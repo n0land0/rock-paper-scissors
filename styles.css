@@ -191,7 +191,17 @@ main {
   background-position: center;
 }
 
-.matchup {}
+.fighters-on-board {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fighters-on-board > img {
+  margin: 5rem;
+}
 
 /* UTILITY CLASSES */
 .hidden {
