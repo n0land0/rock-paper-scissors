@@ -13,6 +13,10 @@ var buttonChangeGame = document.querySelector(".button-change-game");
 // page sections
 var winsColumn = document.querySelector(".wins-column");
 var gameSelect = document.querySelector(".game-select");
+var gameBoard = document.querySelector(".game-board");
+
+var chooseGame = document.querySelector(".choose-game");
+var chooseFighter = document.querySelector(".choose-fighter");
 
 var modes = document.querySelector(".modes");
 var selectMode = document.querySelectorAll(".select-mode");
@@ -28,8 +32,14 @@ buttonChangeGame.addEventListener("click", showModeSelect);
 classicMode.addEventListener("click", showClassicCharacters);
 altMode.addEventListener("click", showAltCharacters);
 
-fightersClassic.addEventListener("click", logCharacter);
-fightersAlt.addEventListener("click", logCharacter);
+fightersClassic.addEventListener("click", clickCharacter);
+fightersAlt.addEventListener("click", clickCharacter);
+  // click fighter >
+  // assign fighter to Player >
+  // runGame on Game instance
+
+// Global variables
+var holdView;
 
 // FUNCTIONS
 
@@ -38,15 +48,19 @@ fightersAlt.addEventListener("click", logCharacter);
   // new Players defaulted on load
 
   // character selection
-function logCharacter() {
+function clickCharacter() {
   if (event.target.classList.contains("character")) {
-    console.log(event.target.classList[1]);
+    // console.log(event.target.classList[1]);
+    toggleGameBoard();
+    holdView = setInterval(toggleGameBoard, 1000);
   }
 }
 
   // view switching
 function showModeSelect() {
+  show(chooseGame);
   show(modes);
+  hide(chooseFighter);
   hide(fighters);
   hide(buttonChangeGame);
 }
@@ -68,10 +82,21 @@ function showAltCharacters() {
 }
 
 function showCharacterSelect() {
+  hide(chooseGame);
   hide(modes);
+  show(chooseFighter);
   show(fighters);
   show(buttonChangeGame);
 }
+
+function toggleGameBoard() {
+  toggle(gameSelect);
+  toggle(gameBoard);
+  toggle(buttonChangeGame);
+  clearInterval(holdView);
+}
+
+// function hideGameBoard()
 
 // UTILITY FUNCTIONS
 function show(element) {
@@ -82,6 +107,14 @@ function hide(element) {
   element.classList.add("hidden");
 }
 
+function toggle(element) {
+  element.classList.toggle("hidden");
+}
+
 function logTarget() {
   console.log(event.target);
+}
+
+function getRandom(arr) {
+  return Math.floor(Math.random() * arr.length);
 }
