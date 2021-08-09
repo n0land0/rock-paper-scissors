@@ -87,7 +87,8 @@ main {
   cursor: pointer;
 }
 /* MAIN ELEMENTS */
-.game-select {
+.game-select,
+.game-board {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,8 +118,9 @@ main {
 }
 .outcome {}
 .modes,
-.fighters,
-.game-board {
+.fighters
+/* .game-board { */
+{
   display: flex;
   width: 100%;
   margin: 2rem 0 6.23rem 0;
@@ -178,6 +180,16 @@ main {
 .squidward-character {}
 .sandy-character {}
 .krabs-character {}
+
+.game-board {
+  width: 72%;
+  height: 40.22rem;
+  background-image: url("assets/798.jpg");
+  /* background-color:  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .matchup {}
 

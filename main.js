@@ -13,6 +13,7 @@ var buttonChangeGame = document.querySelector(".button-change-game");
 // page sections
 var winsColumn = document.querySelector(".wins-column");
 var gameSelect = document.querySelector(".game-select");
+var gameBoard = document.querySelector(".game-board");
 
 var modes = document.querySelector(".modes");
 var selectMode = document.querySelectorAll(".select-mode");
@@ -73,6 +74,13 @@ function showCharacterSelect() {
   show(buttonChangeGame);
 }
 
+function showGameBoard() {
+  toggle(gameSelect);
+  toggle(gameBoard);
+}
+
+// function hideGameBoard()
+
 // UTILITY FUNCTIONS
 function show(element) {
   element.classList.remove("hidden");
@@ -80,6 +88,10 @@ function show(element) {
 
 function hide(element) {
   element.classList.add("hidden");
+}
+
+function toggle(element) {
+  element.classList.toggle("hidden");
 }
 
 function logTarget() {
