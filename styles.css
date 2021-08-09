@@ -136,7 +136,7 @@ main {
   background-color: #0ABAFF;
 }
 .select-mode:hover {
-  background-color: white;
+  filter: hue-rotate(45deg);
   transform: scale(1.1);
   cursor: pointer;
 }
