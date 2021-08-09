@@ -14,9 +14,13 @@ var buttonChangeGame = document.querySelector(".button-change-game");
 var winsColumn = document.querySelector(".wins-column");
 var gameSelect = document.querySelector(".game-select");
 var gameBoard = document.querySelector(".game-board");
+var winsIcons = document.querySelectorAll(".wins-icon");
+var winsHeaders = document.querySelectorAll(".wins-header");
+var winCounts = document.querySelectorAll(".win-count");
 
 var chooseGame = document.querySelector(".choose-game");
 var chooseFighter = document.querySelector(".choose-fighter");
+var outcome = document.querySelector(".outcome");
 
 var modes = document.querySelector(".modes");
 var selectMode = document.querySelectorAll(".select-mode");
@@ -26,8 +30,15 @@ var altMode = document.querySelector(".alt-mode");
 var fighters = document.querySelector(".fighters");
 var fightersClassic = document.querySelector(".fighters-classic");
 var fightersAlt = document.querySelector(".fighters-alt");
+// var characterIcons = document.querySelectorAll(".character");
+var currentFighter = document.querySelectorAll(".current-fighter");
+var fighter1 = document.querySelector(".fighter-1");
+var fighter2 = document.querySelector(".fighter-2");
+
 
 // EVENT LISTENERS
+window.addEventListener("load", renderPlayers);
+
 buttonChangeGame.addEventListener("click", showModeSelect);
 classicMode.addEventListener("click", showClassicCharacters);
 altMode.addEventListener("click", showAltCharacters);
@@ -40,19 +51,50 @@ fightersAlt.addEventListener("click", clickCharacter);
 
 // Global variables
 var holdView;
+var player1;
+var player2;
+var game;
 
 // FUNCTIONS
 
   // new Game starts
 
   // new Players defaulted on load
+    // window event listener?
+function renderPlayers() {
+  player1 = new Player("Human", "assets/human.svg");
+  player2 = new Player("Computer", "assets/robot.svg");
+  winsIcons[0].src = player1.token;
+  winsIcons[1].src = player2.token;
+  winsHeaders[0].innerText = player1.name;
+  winsHeaders[1].innerText = player2.name;
+  winCounts[0].innerText = player1.wins;
+  winCounts[1].innerText = player2.wins;
+}
+
+// game = new Game(player1, player2, "classic-mode");
+
+function renderFighters() {
+  fighter1.src = characters[player1.fighter];
+  fighter1.alt = player1.fighter;
+  fighter2.src = characters[player2.fighter];
+  fighter2.alt = player2.fighter;
+}
 
   // character selection
 function clickCharacter() {
   if (event.target.classList.contains("character")) {
-    // console.log(event.target.classList[1]);
+    player1.fighter = event.target.classList[1];
+    player2.takeTurn();
+    renderFighters();
     toggleGameBoard();
-    holdView = setInterval(toggleGameBoard, 1000);
+    game.runGame();
+    if (game.winner) {
+      outcome.innerText = `${game.winner} wins!`;
+    } else {
+      outcome.innerText = "Draw!";
+    }
+    holdView = setInterval(resetGameBoard, 1000);
   }
 }
 
@@ -71,6 +113,7 @@ function showClassicCharacters() {
     hide(fightersAlt);
   }
   showCharacterSelect();
+  game = new Game(player1, player2, "classic-mode");
 }
 
 function showAltCharacters() {
@@ -79,6 +122,7 @@ function showAltCharacters() {
     hide(fightersClassic);
   }
   showCharacterSelect();
+  game = new Game(player1, player2, "alt-mode");
 }
 
 function showCharacterSelect() {
@@ -89,11 +133,24 @@ function showCharacterSelect() {
   show(buttonChangeGame);
 }
 
+// function toggleGameBoard() {
+//   toggle(gameSelect);
+//   toggle(gameBoard);
+//   toggle(buttonChangeGame);
+//   clearInterval(holdView);
+// }
+
+function resetGameBoard() {
+  game.resetBoard();
+  toggleGameBoard();
+  outcome.innerText = "";
+  clearInterval(holdView);
+}
+
 function toggleGameBoard() {
   toggle(gameSelect);
   toggle(gameBoard);
   toggle(buttonChangeGame);
-  clearInterval(holdView);
 }
 
 // function hideGameBoard()

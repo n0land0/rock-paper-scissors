@@ -47,6 +47,11 @@ class Game {
   }
 }
 
+
+// Use in Game class?
+// var classicModeKeys = Object.keys(this.classicConditions);
+// var altModeKeys = Object.keys(this.altConditions);
+
 // A Game should include:
   // Two Player instances
     // player 1 and player 2 passed in from main

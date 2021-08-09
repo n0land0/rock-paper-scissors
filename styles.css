@@ -93,12 +93,15 @@ main {
   flex-direction: column;
   align-items: center;
 }
-.choose {
+.choose,
+.outcome {
   /* font-family: 'JelleeBold', sans-serif; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 4rem;
+  width: 72%;
   margin: 0;
   padding: 6rem;
   background-image: url("assets/nickelodeon-movies-spongebob-squarepants-television-show-free-257673.png");

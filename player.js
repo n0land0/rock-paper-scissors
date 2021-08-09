@@ -20,6 +20,15 @@ class Player {
     return localStorage.getItem(this.name);
   }
   takeTurn() {
+    if (this.name === "Computer") {
+      if (game.gameType === "classic-mode") {
+        var randomIndex = getRandom(classicCharacters);
+        this.fighter = classicCharacters[randomIndex];
+      } else if (game.gameType === "alt-mode") {
+        var randomIndex = getRandom(altCharacters);
+        this.fighter = altCharacters[randomIndex];
+      }
+    }
     // assign clicked character to this.fighter
   }
 }
