@@ -117,7 +117,8 @@ main {
 }
 .outcome {}
 .modes,
-.fighters {
+.fighters,
+.game-board {
   display: flex;
   width: 100%;
   margin: 2rem 0 6.23rem 0;
