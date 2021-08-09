@@ -20,6 +20,7 @@ var winCounts = document.querySelectorAll(".win-count");
 
 var chooseGame = document.querySelector(".choose-game");
 var chooseFighter = document.querySelector(".choose-fighter");
+var outcome = document.querySelector(".outcome");
 
 var modes = document.querySelector(".modes");
 var selectMode = document.querySelectorAll(".select-mode");
