@@ -45,9 +45,6 @@ altMode.addEventListener("click", showAltCharacters);
 
 fightersClassic.addEventListener("click", clickCharacter);
 fightersAlt.addEventListener("click", clickCharacter);
-  // click fighter >
-  // assign fighter to Player >
-  // runGame on Game instance
 
 // Global variables
 var holdView;
@@ -56,14 +53,12 @@ var player2;
 var game;
 
 // FUNCTIONS
-
-  // new Game starts
-
-  // new Players defaulted on load
-    // window event listener?
+  // rendering
 function renderPlayers() {
   player1 = new Player("Human", "assets/human.svg");
   player2 = new Player("Computer", "assets/robot.svg");
+  player1.retrieveWinsFromStorage();
+  player2.retrieveWinsFromStorage();
   winsIcons[0].src = player1.token;
   winsIcons[1].src = player2.token;
   winsHeaders[0].innerText = player1.name;
@@ -71,8 +66,6 @@ function renderPlayers() {
   winCounts[0].innerText = player1.wins;
   winCounts[1].innerText = player2.wins;
 }
-
-// game = new Game(player1, player2, "classic-mode");
 
 function renderFighters() {
   fighter1.src = characters[player1.fighter];
@@ -94,6 +87,10 @@ function clickCharacter() {
     } else {
       outcome.innerText = "Draw!";
     }
+    winCounts[0].innerText = player1.wins;
+    winCounts[1].innerText = player2.wins;
+    player1.saveWinsToStorage();
+    player2.saveWinsToStorage();
     holdView = setInterval(resetGameBoard, 1000);
   }
 }
@@ -133,13 +130,6 @@ function showCharacterSelect() {
   show(buttonChangeGame);
 }
 
-// function toggleGameBoard() {
-//   toggle(gameSelect);
-//   toggle(gameBoard);
-//   toggle(buttonChangeGame);
-//   clearInterval(holdView);
-// }
-
 function resetGameBoard() {
   game.resetBoard();
   toggleGameBoard();
@@ -152,8 +142,6 @@ function toggleGameBoard() {
   toggle(gameBoard);
   toggle(buttonChangeGame);
 }
-
-// function hideGameBoard()
 
 // UTILITY FUNCTIONS
 function show(element) {
