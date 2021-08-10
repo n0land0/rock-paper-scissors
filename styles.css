@@ -10,7 +10,7 @@ html, body {
   height: 100%;
 }
 
-/* HEADER */
+/* HEADER & FOOTER */
 header, footer {
   display: flex;
   justify-content: center;
