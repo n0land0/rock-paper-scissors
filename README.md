@@ -54,6 +54,7 @@ Rock, Paper, Scissors requires no installation. All features are contained withi
 
 - Would've liked to implement custom user names and icons - I think the way I scoped my Player data would lend itself to that without too much work
 - Would've liked to implement light/dark mode or other theme switching, for practice
+- Would've liked to find a way to streamline my show characters functions, have one that takes an argument for the game type instead of needing separate functions
 
 ## Contributions
 
