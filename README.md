@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors!
 
-Rock, Paper, Scissors is a web app that allows users to... .
+Rock, Paper, Scissors is a web app that allows users to play one of two different versions of the game against a computer opponent.
 
 ## Installation
 
@@ -18,35 +18,33 @@ Rock, Paper, Scissors requires no installation. All features are contained withi
   - Classic, using traditional rock, paper, and scissors characters
   - SpongeBob Death Brawl, using characters based on the SpongeBob Squarepants television program
 
+- Once inside a game mode, the user selects a character, and is then shown a matchup of their selected character against the computer's (randomly) selected character, along with a message declaring a winner or draw
 
-<!-- - On initial page load, no previous activities will be listed.
-- To add an activity, the user must select a category: Study, Meditate, or Exercise.
-  - Once a category has been selected, the user must add a brief activity description, as well as a time value of minutes and seconds.
+- The game board is then automatically reset, directing the user back to the character selection screen
 
-- Once the form has been filled, clicking 'Start Activity' will take the user to a page with a timer.
-  - Clicking 'Start' will make the timer run down until the task has been completed.
+- While on the character selection screen, the user is shown a button allowing to change modes
 
-- Once the timer reaches 0:00, a 'Log Activity' button will appear which will return the user to the form view.
-  - A summary of the completed activity in the form of a miniature card will be added to the Past Activities section on the right side of the page. -->
+- The number of wins across game modes will persist in the wins column when the user returns to the site on later visits
 
-![recording (6)](https://media.giphy.com/media/aFh1hkg6nW1wRKCGWi/giphy.gif)
+![recording (1)](https://media.giphy.com/media/aFh1hkg6nW1wRKCGWi/giphy.gif)
 
-
-**Error Handling:**
-
-<!-- If the user does not enter a category, description, or a time value, an error message will display beneath the empty section(s), prompting the user to complete the form.
-
-- These messages will disappear as soon as a category is selected, or as soon as the user types in a field. -->
-
-![recording (7)](GIF url)
 
 ## Programming Languages and Dependencies
 
 **This app was developed using:**
 
+- JavaScript
 - HTML
 - CSS
-- JavaScript
+
+## Architecture
+
+- main.js for all DOM manipulation
+- player.js for construction of the Player class, which tracks data for Human and Computer gameplay across all game modes and site visits on the same browser
+- game.js for construction of the Game class, which contains the data for game type, ruleset for each game type, outcome determination, and board reset on the data side
+- index.html
+  - custom fonts linked herein
+- styles.css
 
 ## Wins
 
@@ -54,7 +52,8 @@ Rock, Paper, Scissors requires no installation. All features are contained withi
 
 ## Challenges + Improvements
 
--
+- Would've liked to implement custom user names and icons - I think the way I scoped my Player data would lend itself to that without too much work
+- Would've liked to implement light/dark mode or other theme switching, for practice
 
 ## Contributions
 
