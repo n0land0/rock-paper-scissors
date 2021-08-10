@@ -1,19 +1,19 @@
 // QUERY SELECTORS
 // page title
-var titleMain = document.querySelector(".title-main");
+// var titleMain = document.querySelector(".title-main");
 
 // win column
-var humanIcon = document.querySelector(".human-icon");
-var computerIcon = document.querySelector(".computer-icon");
+// var humanIcon = document.querySelector(".human-icon");
+// var computerIcon = document.querySelector(".computer-icon");
 
-var winCountHuman = document.querySelector(".win-count-human");
-var winCountComputer = document.querySelector(".win-count-computer");
+// var winCountHuman = document.querySelector(".win-count-human");
+// var winCountComputer = document.querySelector(".win-count-computer");
 var buttonChangeGame = document.querySelector(".button-change-game");
 
 // page sections
-var winsColumn = document.querySelector(".wins-column");
+// var winsColumn = document.querySelector(".wins-column");
 var gameSelect = document.querySelector(".game-select");
-var gameBoard = document.querySelector(".game-board");
+// var gameBoard = document.querySelector(".game-board");
 var winsIcons = document.querySelectorAll(".wins-icon");
 var winsHeaders = document.querySelectorAll(".wins-header");
 var winCounts = document.querySelectorAll(".win-count");
@@ -23,14 +23,14 @@ var chooseFighter = document.querySelector(".choose-fighter");
 var outcome = document.querySelector(".outcome");
 
 var modes = document.querySelector(".modes");
-var selectMode = document.querySelectorAll(".select-mode");
+// var selectMode = document.querySelectorAll(".select-mode");
 var classicMode = document.querySelector(".classic-mode");
 var altMode = document.querySelector(".alt-mode");
 
 var fighters = document.querySelector(".fighters");
 var fightersClassic = document.querySelector(".fighters-classic");
 var fightersAlt = document.querySelector(".fighters-alt");
-var currentFighter = document.querySelectorAll(".current-fighter");
+// var currentFighter = document.querySelectorAll(".current-fighter");
 var fighter1 = document.querySelector(".fighter-1");
 var fighter2 = document.querySelector(".fighter-2");
 
