@@ -13,7 +13,7 @@ var buttonChangeGame = document.querySelector(".button-change-game");
 // page sections
 // var winsColumn = document.querySelector(".wins-column");
 var gameSelect = document.querySelector(".game-select");
-// var gameBoard = document.querySelector(".game-board");
+var gameBoard = document.querySelector(".game-board");
 var winsIcons = document.querySelectorAll(".wins-icon");
 var winsHeaders = document.querySelectorAll(".wins-header");
 var winCounts = document.querySelectorAll(".win-count");
