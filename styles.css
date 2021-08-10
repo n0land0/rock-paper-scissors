@@ -58,8 +58,8 @@ main {
   width: 3rem;
   height: 3rem;
 }
-.human-icon {}
-.computer-icon {}
+/* .human-icon {} */
+/* .computer-icon {} */
 .wins-header {
   margin: 0.25rem;
   font-size: 2.25rem;
@@ -69,8 +69,8 @@ main {
   margin: 0;
   font-size: 1.5rem;
 }
-.win-count-human {}
-.win-count-computer {}
+/* .win-count-human {} */
+/* .win-count-computer {} */
 .button-change-game {
   margin: 1rem;
   padding: 1rem;
@@ -119,10 +119,9 @@ main {
     -1px 1px 0 #FFF,
     1px 1px 0 #FFF;
 }
-.outcome {}
+/* .outcome {} */
 .modes,
 .fighters
-/* .game-board { */
 {
   display: flex;
   width: 100%;
@@ -143,8 +142,8 @@ main {
   transform: scale(1.1);
   cursor: pointer;
 }
-.classic-mode {}
-.alt-mode {}
+/* .classic-mode {}
+.alt-mode {} */
 .mode-header {
   margin: 1rem 0 1rem 0;
   font-variant: small-caps;
@@ -163,8 +162,8 @@ main {
   justify-content: space-between;
   /* margin: 0 4rem 0 4rem; */
 }
-.fighters-classic {}
-.fighters-alt {}
+/* .fighters-classic {}
+.fighters-alt {} */
 .select-fighter > button {
   padding: none;
   border: none;
@@ -180,14 +179,14 @@ main {
   filter: drop-shadow(0 0 5px grey);
   cursor: pointer;
 }
-.rock-character {}
+/* .rock-character {}
 .paper-character {}
 .scissors-character {}
 .spongebob-character {}
 .patrick-character {}
 .squidward-character {}
 .sandy-character {}
-.krabs-character {}
+.krabs-character {} */
 
 .game-board {
   width: 72%;
