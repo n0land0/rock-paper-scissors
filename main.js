@@ -30,7 +30,6 @@ var altMode = document.querySelector(".alt-mode");
 var fighters = document.querySelector(".fighters");
 var fightersClassic = document.querySelector(".fighters-classic");
 var fightersAlt = document.querySelector(".fighters-alt");
-// var characterIcons = document.querySelectorAll(".character");
 var currentFighter = document.querySelectorAll(".current-fighter");
 var fighter1 = document.querySelector(".fighter-1");
 var fighter2 = document.querySelector(".fighter-2");
@@ -47,7 +46,7 @@ fightersClassic.addEventListener("click", clickCharacter);
 fightersAlt.addEventListener("click", clickCharacter);
 
 // Global variables
-var holdView;
+// var holdView;
 var player1;
 var player2;
 var game;
@@ -91,7 +90,8 @@ function clickCharacter() {
     winCounts[1].innerText = player2.wins;
     player1.saveWinsToStorage();
     player2.saveWinsToStorage();
-    holdView = setInterval(resetGameBoard, 1000);
+    // holdView = setInterval(resetGameBoard, 1000);
+    setTimeout(resetGameBoard, 1000);
   }
 }
 
@@ -134,7 +134,7 @@ function resetGameBoard() {
   game.resetBoard();
   toggleGameBoard();
   outcome.innerText = "";
-  clearInterval(holdView);
+  // clearInterval(holdView);
 }
 
 function toggleGameBoard() {
