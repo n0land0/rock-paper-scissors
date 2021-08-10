@@ -64,6 +64,14 @@ var game;
 function renderPlayers() {
   player1 = new Player("Human", "assets/human.svg");
   player2 = new Player("Computer", "assets/robot.svg");
+  // if (localStorage[player1.name]) {
+  //   player1.wins = localStorage[player1.name];
+  // }
+  // if (localStorage[player2.name]) {
+  //   player2.wins = localStorage[player2.name];
+  // }
+  player1.retrieveWinsFromStorage();
+  player2.retrieveWinsFromStorage();
   winsIcons[0].src = player1.token;
   winsIcons[1].src = player2.token;
   winsHeaders[0].innerText = player1.name;
@@ -96,6 +104,8 @@ function clickCharacter() {
     }
     winCounts[0].innerText = player1.wins;
     winCounts[1].innerText = player2.wins;
+    player1.saveWinsToStorage();
+    player2.saveWinsToStorage();
     holdView = setInterval(resetGameBoard, 1000);
   }
 }

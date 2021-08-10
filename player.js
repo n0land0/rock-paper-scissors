@@ -17,7 +17,10 @@ class Player {
     // var fromStorage = localStorage.getItem(this.name);
     // var parsed = JSON.parse(fromStorage);
     // return parsed;
-    return localStorage.getItem(this.name);
+
+    if (localStorage[this.name]) {
+      this.wins = localStorage.getItem(this.name);
+    }
   }
   takeTurn() {
     if (this.name === "Computer") {
