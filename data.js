@@ -16,3 +16,14 @@ var classicCharacters = [
 var altCharacters = [
   "spongebob", "patrick", "squidward", "sandy", "krabs"
 ];
+
+
+// REFACTOR GOALS
+// write game.runGame to be one conditional
+  // requires gameType values to match names of condition properties
+// deal with alt tags on empty img elements
+
+// ✅ replace setInterval w/ setTimeout & eliminate global variable
+// ✅ remove placeholder from HTML current fighters
+// ✅ convert fighter imgs to buttons
+// ✅ which classes, query selectors am I not using?
