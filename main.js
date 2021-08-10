@@ -94,6 +94,8 @@ function clickCharacter() {
     } else {
       outcome.innerText = "Draw!";
     }
+    winCounts[0].innerText = player1.wins;
+    winCounts[1].innerText = player2.wins;
     holdView = setInterval(resetGameBoard, 1000);
   }
 }
