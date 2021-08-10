@@ -1,17 +1,9 @@
 // QUERY SELECTORS
-// page title
-var titleMain = document.querySelector(".title-main");
 
 // win column
-var humanIcon = document.querySelector(".human-icon");
-var computerIcon = document.querySelector(".computer-icon");
-
-var winCountHuman = document.querySelector(".win-count-human");
-var winCountComputer = document.querySelector(".win-count-computer");
 var buttonChangeGame = document.querySelector(".button-change-game");
 
 // page sections
-var winsColumn = document.querySelector(".wins-column");
 var gameSelect = document.querySelector(".game-select");
 var gameBoard = document.querySelector(".game-board");
 var winsIcons = document.querySelectorAll(".wins-icon");
@@ -23,15 +15,12 @@ var chooseFighter = document.querySelector(".choose-fighter");
 var outcome = document.querySelector(".outcome");
 
 var modes = document.querySelector(".modes");
-var selectMode = document.querySelectorAll(".select-mode");
 var classicMode = document.querySelector(".classic-mode");
 var altMode = document.querySelector(".alt-mode");
 
 var fighters = document.querySelector(".fighters");
 var fightersClassic = document.querySelector(".fighters-classic");
 var fightersAlt = document.querySelector(".fighters-alt");
-// var characterIcons = document.querySelectorAll(".character");
-var currentFighter = document.querySelectorAll(".current-fighter");
 var fighter1 = document.querySelector(".fighter-1");
 var fighter2 = document.querySelector(".fighter-2");
 
@@ -47,7 +36,6 @@ fightersClassic.addEventListener("click", clickCharacter);
 fightersAlt.addEventListener("click", clickCharacter);
 
 // Global variables
-var holdView;
 var player1;
 var player2;
 var game;
@@ -61,6 +49,8 @@ function renderPlayers() {
   player2.retrieveWinsFromStorage();
   winsIcons[0].src = player1.token;
   winsIcons[1].src = player2.token;
+  winsIcons[0].alt = player1.name;
+  winsIcons[1].alt = player2.name;
   winsHeaders[0].innerText = player1.name;
   winsHeaders[1].innerText = player2.name;
   winCounts[0].innerText = player1.wins;
@@ -91,7 +81,7 @@ function clickCharacter() {
     winCounts[1].innerText = player2.wins;
     player1.saveWinsToStorage();
     player2.saveWinsToStorage();
-    holdView = setInterval(resetGameBoard, 1000);
+    setTimeout(resetGameBoard, 1000);
   }
 }
 
@@ -134,7 +124,6 @@ function resetGameBoard() {
   game.resetBoard();
   toggleGameBoard();
   outcome.innerText = "";
-  clearInterval(holdView);
 }
 
 function toggleGameBoard() {
