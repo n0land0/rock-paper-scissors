@@ -12,6 +12,13 @@ Rock, Paper, Scissors requires no installation. All features are contained withi
 
 **How to use Rock, Paper Scissors:**
 
+- The user plays games of rock, paper, scissors against a computer player.
+
+- The user can select between one of two game modes:
+  - Classic, using traditional rock, paper, and scissors characters
+  - SpongeBob Death Brawl, using characters based on the SpongeBob Squarepants television program
+
+
 <!-- - On initial page load, no previous activities will be listed.
 - To add an activity, the user must select a category: Study, Meditate, or Exercise.
   - Once a category has been selected, the user must add a brief activity description, as well as a time value of minutes and seconds.
@@ -22,7 +29,7 @@ Rock, Paper, Scissors requires no installation. All features are contained withi
 - Once the timer reaches 0:00, a 'Log Activity' button will appear which will return the user to the form view.
   - A summary of the completed activity in the form of a miniature card will be added to the Past Activities section on the right side of the page. -->
 
-![recording (6)](GIF url)
+![recording (6)](https://media.giphy.com/media/aFh1hkg6nW1wRKCGWi/giphy.gif)
 
 
 **Error Handling:**
