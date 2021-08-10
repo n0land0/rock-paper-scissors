@@ -60,6 +60,8 @@ function renderPlayers() {
   player2.retrieveWinsFromStorage();
   winsIcons[0].src = player1.token;
   winsIcons[1].src = player2.token;
+  winsIcons[0].alt = player1.name;
+  winsIcons[1].alt = player2.name;
   winsHeaders[0].innerText = player1.name;
   winsHeaders[1].innerText = player2.name;
   winCounts[0].innerText = player1.wins;
