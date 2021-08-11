@@ -25,6 +25,7 @@ As private repositories on the free version of GitHub cannot deploy pages, the R
 - The number of wins across game modes will persist in the wins column when the user returns to the site on later visits
 
 ![recording (1)](https://media.giphy.com/media/aFh1hkg6nW1wRKCGWi/giphy.gif)
+(This gif is a little blurry, but the computer's win count does in fact increment to 2 and 3 and persist with refreshes.)
 
 
 ## Programming Languages and Dependencies
