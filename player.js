@@ -9,8 +9,6 @@ class Player {
     this.wins ++;
   }
   saveWinsToStorage() {
-    // var stringy = JSON.stringify(this);
-    // localStorage.setItem(this.name, stringy);
     localStorage.setItem(this.name, this.wins);
   }
   retrieveWinsFromStorage() {
@@ -18,12 +16,12 @@ class Player {
       this.wins = localStorage.getItem(this.name);
     }
   }
-  takeTurn() {
+  takeTurn(gameType) {
     if (this.name === "Computer") {
-      if (game.gameType === "classic-mode") {
+      if (gameType === "classicConditions") {
         var randomIndex = getRandom(classicCharacters);
         this.fighter = classicCharacters[randomIndex];
-      } else if (game.gameType === "alt-mode") {
+      } else if (gameType === "altConditions") {
         var randomIndex = getRandom(altCharacters);
         this.fighter = altCharacters[randomIndex];
       }
