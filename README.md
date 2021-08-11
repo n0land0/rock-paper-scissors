@@ -4,9 +4,7 @@ Rock, Paper, Scissors is a web app that allows users to play one of two differen
 
 ## Installation
 
-Rock, Paper, Scissors requires no installation. All features are contained within the web app, which leverages local storage to keep track of the user's activities across visits.
-
-!Deploy link?! [Click here to access Rock, Paper, Scissors!](https://n0land0.github.io/rock-paper-scissors/)
+As private repositories on the free version of GitHub cannot deploy pages, the Rock, Paper, Scissors repo should be cloned to the user's local machine.
 
 ## Usage and Demonstration
 
@@ -48,17 +46,21 @@ Rock, Paper, Scissors requires no installation. All features are contained withi
 
 ## Wins
 
--
+- Rock and Mentor (on this repo) both praised my implementation and clean JS, which felt good
+- A lot of functionality that I had expected to deal with in later iterations kind of wrote itself before I got to them. In hindsight I think the way I conceived of the structure of my site made that easy
+- I managed to do a couple clean JS refactors on the last day of project work
+- Styling from the ground up felt pretty easy for this project
 
 ## Challenges + Improvements
 
+- My use of localStorage was pretty limited as I only needed to store simple data types, & thus didn't need to format or parse data for the app to work as intended. With more time I would've been interested in trying more complex storage operations, perhaps with login info
 - Would've liked to implement custom user names and icons - I think the way I scoped my Player data would lend itself to that without too much work
 - Would've liked to implement light/dark mode or other theme switching, for practice
 - Would've liked to find a way to streamline my show characters functions, have one that takes an argument for the game type instead of needing separate functions
 
 ## Contributions
 
-**Developers:**
+**Developer:**
 
 _This app was developed by:_
 
