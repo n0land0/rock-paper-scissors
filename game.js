@@ -21,20 +21,11 @@ class Game {
     if (this.player1.fighter === this.player2.fighter) {
       this.winner = null;
       return "Draw!";
-    } else if (this.gameType === "classic-mode") {
-      if (this.classicConditions[this.player1.fighter].includes(this.player2.fighter)) {
+    } else {
+      if (this[this.gameType][this.player1.fighter].includes(this.player2.fighter)) {
         this.winner = this.player1.name;
         this.player1.win();
-      } else if (this.classicConditions[this.player2.fighter].includes(this.player1.fighter)) {
-        this.winner = this.player2.name;
-        this.player2.win();
-      }
-      return `${this.winner} wins!`;
-    } else if (this.gameType === "alt-mode") {
-      if (this.altConditions[this.player1.fighter].includes(this.player2.fighter)) {
-        this.winner = this.player1.name;
-        this.player1.win();
-      } else if (this.altConditions[this.player2.fighter].includes(this.player1.fighter)) {
+      } else if (this[this.gameType][this.player2.fighter].includes(this.player1.fighter)) {
         this.winner = this.player2.name;
         this.player2.win();
       }
