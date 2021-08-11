@@ -58,7 +58,8 @@ As private repositories on the free version of GitHub cannot deploy pages, the R
 - My use of localStorage was pretty limited as I only needed to store simple data types, & thus didn't need to format or parse data for the app to work as intended. With more time I would've been interested in trying more complex storage operations, perhaps with login info
 - Would've liked to implement custom user names and icons - I think the way I scoped my Player data would lend itself to that without too much work
 - Would've liked to implement light/dark mode or other theme switching, for practice
-- Would've liked to find a way to streamline my show characters functions, have one that takes an argument for the game type instead of needing separate functions
+- Would've liked to find a way to streamline my show characters functions in a way similar to my runGame refactor - have one that takes an argument for the game type instead of needing separate functions
+- Creating a helper function or two for my clickCharacter function would've improved readability, by grouping the actions it triggers by type
 
 ## Contributions
 
