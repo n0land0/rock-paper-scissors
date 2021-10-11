@@ -1,6 +1,6 @@
-# Rock, Paper, Scissors!
+# Rock, Paper, Scissors / SpongeBob Death Match
 
-Rock, Paper, Scissors is a web app that allows users to play one of two different versions of the game against a computer opponent.
+Rock, Paper, Scissors / SpongeBob Death Match is a web app that allows users to play one of two different versions of the game against a computer opponent.
 
 ## Installation
 
